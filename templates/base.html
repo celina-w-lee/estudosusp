@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock %} | Estudos USP
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'newstyle.css' %}">
+</head>
+
+<body>
+    <header id="cabecalho-principal">
+        <a href="{% url 'index' %}" class="cabecalho-logo"> <img src="{% static 'logo.svg' %}"> </a>
+        <nav id="navegacao-principal">
+            <ul>
+                <li><a href="{% url 'locais:index' %}">PÁGINA INICIAL</a></li>
+                <li><a href="{% url 'index' %}">ADICIONAR NOVO LOCAL</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">LOG OUT</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">LOG IN</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main id="conteiner-principal">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer id="rodape-principal">
+        <p>
+            <small>Copyright 2022</small>
+        </p>
+    </footer>
+</body>
+
+</html>

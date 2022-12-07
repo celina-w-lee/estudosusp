@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+    <section class="detail">
+        <h1> {{ local.nome }} </h1>
+        <p><i>Última atualização em {{local.atualizacao}}</i></p>
+        <img src="..{{local.imagem.url}}" alt="{{local.nome}}" width="60%" height="auto">
+        <p> <b>Status:</b> {{ local.status }}</p>
+        <p> <b>Possui tomada?</b> {{ local.tomada }} </p>
+        <p> <b>Ruído:</b> {{ local.ruido }}</p>
+        <p> <b>É coberto?</b> {{ local.coberto }}</p>
+        <p> <b>É possível estudar em grupo?</b> {{ local.grupo }}</p>
+        <p> <b>Permissões:</b> {{ local.permissoes }}</p>
+        <p> <b>Flexibilidade:</b> {{ local.flexibilidade }}</p>
+        <p> <b>Funcionamento:</b> </p>
+        <p>{{local.dias_func}} das {{ local.inicio_func }} às {{local.fim_func}}</p>
+
+        {% if local.avaliacao_set.all %}
+            <p>Nota média: {{ local.average_rating }} </p>
+            <p>Número de avaliações: {{ local.rating_count }} </p>
+        {% else %}
+            <p><i>Não há avaliações para este local.</i></p>
+        {% endif %}
+
+
+        <p><a class="body" href="{% url 'locais:update' local.id %}" >Atualizar dados deste local</a> </p>
+        <p><a class="body" href="{% url 'locais:rate' local.id %}" >Avaliar local</a> </p>
+        <p><a class="body" href="{% url 'locais:index' %}" >Voltar</a> </p>
+    </section>
+    
+</body>
+{% endblock content %}

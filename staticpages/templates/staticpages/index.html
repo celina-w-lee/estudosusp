@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Página Inicial
+{% endblock title %}
+
+{% block content %}
+<body>
+    <section>
+        <h1><i>Locais de Estudo dentro da USP</i></h1>
+        <p>Acompanhe para descobrir mais detalhes dos lugares para você estudar!</p>
+        <p><a class="body" href="{% url 'locais:index' %}">
+            Ver lista de locais</a></p>
+    </section>
+</body>
+{% endblock content %}

@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #3D3D3D;
+    --secondary-color: #0096AB;
+    --tertiary-color: #FFB926;
+    --secondary-color-hover: #007B8D;
+    --tertiary-color-hover: #FFC918;
+    --primary-bg-color: #FFFFFF;
+    --secondary-bg-color: #DEDEDE;
+    --color-shadow: #F4F4F4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, ul, li {
+    text-decoration: none;
+    list-style: none;
+    color: var(--secondary-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    color: var(--secondary-color-hover);
+}
+
+a.body{
+    color: var(--primary-color);
+}
+a.body:hover{
+    color: var(--secondary-color-hover);
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+header#cabecalho-principal {
+    margin: 0 auto;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-logo{
+    margin: 0 auto;
+    width: 100%;
+    padding: 2.25rem 1rem;
+    background-color: var(--tertiary-color);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav#navegacao-principal {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1.5rem 5rem;
+    background-color: var(--secondary-color);
+    align-items: center;
+}
+
+nav#navegacao-principal ul {
+    margin: 0 auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav#navegacao-principal li a {
+    margin: 0 auto;
+    width: 100%;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--primary-bg-color);
+}
+
+main#container-principal {
+    align-items: center;
+}
+
+section{
+    margin: 8px;
+    background-color: #007B8D;
+}
+
+section.detail{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #007B8D;
+}
+
+footer{
+    margin: 8px;
+}
+
+.register-card {
+
+    width: 80vh;
+    margin: 5rem auto;
+    background-color: var(--secondary-bg-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-card p{
+    font-size: 14px;
+}
+
+.register-card a{
+    color: var(--primary-color);
+    margin: 0.5rem;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.register-card-title {
+
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+.register-card-title h2{
+    text-align: center;
+    color: var(--primary-bg-color);
+}
+
+form#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 60%;
+}
+
+form#register-form p {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+form#register-form p label{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+form#register-form p input{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.35rem;
+
+}
+
+form#register-form ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--primary-color);
+    font-size: 11px;
+    list-style: circle;
+}
+
+form#register-form button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: var(--primary-bg-color);
+    font-weight: 700;
+
+}
+
+.helptext {
+    color: var(--primary-color);
+    font-size: 11px;
+    list-style: circle;
+}

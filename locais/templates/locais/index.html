@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+    <section>
+        <h1><i>Locais de Estudo dentro da USP</i></h1>
+        <p>Abaixo estão os locais para estudar na USP! Se você não encontrou algum,
+            você pode fazer o Login e adicionar um novo!
+        </p>
+
+            {% if local_list %}
+            {% for local in local_list %}
+            <div class="local-item">
+                <a class="body" href="{% url 'locais:detail' local.id %}">
+                    <p>{{ local.nome}} </p></a>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>Não foi encontrado nenhum local.</p>
+            {% endif %}
+            </div>
+
+    </section>
+
+</body>
+{% endblock content %}
